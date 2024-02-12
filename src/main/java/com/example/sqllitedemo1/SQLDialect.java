@@ -8,7 +8,9 @@ import org.hibernate.type.StringType;
 
 import java.sql.Types;
 
-
+/**
+ * SQL Dialect class is required especially when there are no dependencies that are compatible
+ * */
 public class SQLDialect extends Dialect {
     public SQLDialect() {
         registerColumnType(Types.BIT, "integer");

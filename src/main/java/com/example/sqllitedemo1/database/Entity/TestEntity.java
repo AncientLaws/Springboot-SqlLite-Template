@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "test")
 @Component
-public class Testdb {
+public class TestEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -36,12 +36,12 @@ public class Testdb {
         this.id = id;
     }
 
-    public Testdb(Long id, String value) {
+    public TestEntity(Long id, String value) {
         this.id = id;
         this.value = value;
     }
 
-    public Testdb() {
-        System.out.println("Initializled Entity testdb.java");
+    public TestEntity() {
+        System.out.println("Initializled Entity testEntity.java");
     }
 }

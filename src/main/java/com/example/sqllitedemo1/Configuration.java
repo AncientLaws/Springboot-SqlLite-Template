@@ -28,7 +28,9 @@ public class Configuration {
 //    }
 
 
-//    Better method of building a datasource
+/**
+ * Configuration using the application.properities file
+ * */
     @Bean
     public DataSource dataSource(){
         DataSourceBuilder dataSource = DataSourceBuilder.create();
@@ -40,6 +42,9 @@ public class Configuration {
     }
 
 
+    /**
+     * Configuration by hard coding in values (bad practice)
+     * */
 //    @Bean
 //    public DataSource dataSource() {
 //        DriverManagerDataSource dataSource = new DriverManagerDataSource();
