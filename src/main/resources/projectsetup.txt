@@ -1,0 +1,18 @@
+1- In order to use SQLLite hibernate and SQL dialect, the Springboot parent must be set to the following:
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
+2 - Must include the SQLDialect class, this goes with point 1
+3 - Database connection Configuration is done via the Configuration bean
+4 - Configuring hibernate must be done via the application.properties:
+    # Hibernate configuration
+        spring.jpa.database-platform=com.example.sqllitedemo1.SQLDialect
+        spring.jpa.hibernate.ddl-auto=update
+        spring.jpa.show-sql=true
+ Note the path for spring.jpa.database-platform is project specific
+
+ 5 - Note that the entity has to be named by setting name = "", otherwise you run into sqllite locking error
+ which appears to be due to multiple threads attempting to access the db.
+
+
